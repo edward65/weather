@@ -1,0 +1,379 @@
+/*全域共通使用*/
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+	font-size: 22px;
+}
+body,td,th {
+	font-family: Century Gothic, Arial, Helvetica, sans-serif, "微軟正黑體";
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #F8F8FA;
+	-ms-overflow-style: none;
+	overflow: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+
+
+/* 第1個區塊 */
+.section1 {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	max-width: 1024px;
+}
+.section1 .area {
+	color: #444444;
+	font-size: 2em;
+	padding-top: 2em;
+	padding-bottom: 0.2em;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+}
+.section1 .date {
+	font-weight: normal;
+	font-size: 2em;
+	color: #444444;
+	padding-top: 0.2em;
+	padding-bottom: 1em;
+	width:100%;
+}
+.section1 .weather-image {
+	padding-top: 1em;
+	padding-bottom: 0px;
+	height: 100%;
+	width:100%;
+}
+.section1 .weather-description {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #444444;
+	padding-top: 0px;
+	padding-bottom: 0.8em;
+	width:100%;
+}
+.section1 .temperature {
+	font-weight: normal;
+	color: #444444;
+	vertical-align: bottom;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width:100%;
+}
+.section1 .temperature .high {
+	font-size: 4em;
+	font-weight: normal;
+	color: #ED702D;
+}
+.section1 .temperature .low {
+	font-weight: normal;
+	color: #285FC3;
+	font-size: 4em;
+}
+.section1 .rainprobability {
+	font-weight: normal;
+	color: #444444;
+	vertical-align: bottom;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width:100%;
+}
+.section1 .rainprobability .percge {
+	font-size: 3.5em;
+	font-weight: normal;
+	text-align: center;
+}
+
+
+
+
+
+/* 第2個區塊 */
+.section2 {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	max-width:1024px;
+	
+}
+.section2scroll{
+	overflow-y: auto;
+	scroll-snap-type: x mandatory;
+	margin: 0px;
+	padding: 0px;
+}
+.section2scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.section2 .time-blocks {
+	scroll-snap-align: start;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #B6B6B6;
+	height: 28px;
+	vertical-align: middle;
+	padding-top: 0.8em;
+	clear: both;
+	margin-top: 1em;
+}
+
+.section2 .time-blocks .time-cell {
+	flex: 0 0 8.33%;
+	width: 8.3%;
+	min-width:50px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	float: left;
+}
+.section2 .time-blocks .time-cell .old {
+	color: #999999;
+	font-size: 1em;
+}
+.section2 .time-blocks .time-cell .fut {
+	color: #444444;
+	font-size: 1.1em;
+}
+.section2 .weathericons {
+	display: block;
+	align-items: flex-start;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	background-color: #EEF7FB;
+	padding-top: 0.8em;
+}
+.section2 .weathericons .icons-img {
+	float: left;
+	width: 8.33%;
+	min-width:50px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #EEF7FB;
+}
+
+
+
+.weather-icons .weather-icon {
+  flex: 0 0 8.33%;
+  height: 50px;
+  /* 放置天氣小圖的樣式 */
+}
+
+.section2 .temperature-chart {
+    background-color: #EEF7FB;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    color: #7D7D7D;
+	position: relative;
+	text-align: center;
+  }
+
+
+.chart-container {
+    height: 200px;
+    width: 96%;
+	z-index: 100;
+	margin-right: auto;
+    margin-left: auto;
+	border: none;
+}  
+
+.myChart {
+    font-size: 1.1em;
+}  
+
+.section2 .rain-probability {
+  background-color: #EEF7FB;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* 放置降雨機率的樣式 */
+}
+.section2 .rain-probability .rain-cell {
+	float: left;
+	width: 8.3%;
+	min-width:50px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1.1em;
+	color: #285FC3;
+}
+
+
+/* 第3個區塊 */
+.section3 {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 2em;
+	padding-left: 2em;
+	max-width: 1024px;
+	margin-top: 2em;
+	margin-bottom: 1.3em;  
+}
+
+.section3 .grid {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.section3 .grid-item {
+	flex: 1 1 1;
+	color: #444444;
+	width: 24%;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #F4F4F4;
+	padding: 1em;
+	min-width:150px;
+}
+.section3 .grid .grid-item .title {
+	text-align: center;
+	width: 100%;
+	color: #444444;
+	font-size: 1.5em;
+}
+.section3 .grid .grid-item .number {
+	font-size: 3em;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+	padding-top: 8px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+.section3 .grid .grid-item .number .commentOrg {
+	font-size: 0.5em;
+	color: #ED702D;
+}
+.section3 .grid .grid-item .number .commentGre {
+	font-size: 0.5em;
+	color: #339900;
+}
+.section3 .grid .grid-item .number .commentYel {
+	font-size: 0.5em;
+	color: #FFFF00;
+}
+
+
+
+
+/* 第4個區塊 */
+.section4 {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 2em;
+	padding-left: 2em;
+	max-width:1024px;
+}
+
+.section4 .data-row {
+	width: 98%;
+	border-radius: 8px;
+	border: 1px solid #F4F4F4;
+	background-color: #ffffff;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1.5em;
+}
+
+.section4 .data-row .data-item {
+	width: 95%;
+	padding: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	vertical-align: bottom;
+	text-align: center;
+	color: #444444;
+}
+.section4 .data-row hr {
+	border-top: 1px solid #EDEDED;
+	width: 90%;
+	text-align: center;
+	margin-top: 1px;
+	margin-right: auto;
+	margin-bottom: 1px;
+	margin-left: auto;
+}
+
+
+.section4 .data-row .data-item  .field {
+	float: left;
+	width: 25%;  /* 放置每日天氣小圖的樣式 */
+	text-align: center;
+	height: 25px;
+	padding-top: 5px;
+}
+.section4 .data-row .data-item .field .fontRen {
+	color: #EE3E3E;
+}
+.section4 .data-row .data-item .field .fontOrg {
+	color: #ED702D;
+}
+.section4 .data-row .data-item .field .fontBlu {
+	color: #285FC3;
+}
+
+
+/* 第5個區塊 */
+.section5 {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	max-width:1024px;
+	height:150px;
+	
+}

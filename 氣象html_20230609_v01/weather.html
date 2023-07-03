@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>氣象資訊</title>
+  <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Time', 'temperatureO', 'temperatureN'],
+          ['06:00',  19,  null],
+          ['07:00',  21,  null],
+          ['08:00',  22,  null],
+          ['09:00',  22,  null],
+		  ['10:00',  22,  null],
+		  ['11:00',  27,  null],
+		  ['12:00',  31, 31],
+		  ['01:00',  null, 30],
+		  ['02:00',  null, 27],
+		  ['03:00',  null, 31],
+		  ['04:00',  null, 30],
+		  ['05:00',  null, 27]
+        ]);
+
+        var options = {
+          //title: 'Company Performance',
+          //curveType: 'function',
+          legend: { position: 'bottom' },
+		  backgroundColor: '#EEF7FB',
+		  colors:['#D1D1D1', '#FA810F'],
+		  chartArea:{left:0,top:0,width:'100%',height:'100%'},
+		  hAxis: { textPosition: 'none' },
+          vAxis: { textPosition: 'none', gridlines: { color: 'transparent' } },
+          colors: ['gray', 'orange'],
+          series: {
+                   0: {
+                       pointShape: 'circle',
+                       pointSize: 10
+                      },
+                   1: {
+                       pointShape: 'circle',
+                       pointSize: 10
+                      }
+                  },
+          annotations: {
+                      alwaysOutside: true,
+                      textStyle: {
+                                  fontSize: 14
+                                 }
+                       }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+    chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+  <!-- 第1個區塊 -->
+  <div class="section1">
+    <div class="area">台北市</div>
+    <div class="date">6月15日 星期一</div>
+    <div class="weather-image"><img src="images/big/天氣ICON_02晴時多雲  1@3x.png" srcset="天氣ICON_02晴時多雲  1@2x.png 1x, 天氣ICON_02晴時多雲  1@3x.png 2x" alt="02_晴時多雲"></div>
+    <div class="weather-description">晴時多雲</div>
+    <div class="temperature">最高溫:<span class="high"> 30°C </span>&nbsp;&nbsp; |  &nbsp;&nbsp;最低溫: <span class="low">20°C</span></div>
+    <div class="rainprobability">降雨機率:&nbsp; <span class="percge">20%</span>&nbsp;</div>
+  </div>
+  
+  <!-- 第2個區塊 -->
+  <div class="section2">
+  <div class="section2scroll">
+    <div class="time-blocks">
+      <!-- 小時格子 -->
+      <div class="time-cell"><span class="old">06:00</span></div>
+	  <div class="time-cell"><span class="old">07:00</span></div>
+	  <div class="time-cell"><span class="old">08:00</span></div>
+	  <div class="time-cell"><span class="old">09:00</span></div>
+	  <div class="time-cell"><span class="old">10:00</span></div>
+	  <div class="time-cell"><span class="old">11:00</span></div>
+	  <div class="time-cell"><span class="fut">12:00</span></div>
+	  <div class="time-cell"><span class="fut">01:00</span></div>
+	  <div class="time-cell"><span class="fut">02:00</span></div>
+      <div class="time-cell"><span class="fut">03:00</span></div>
+	  <div class="time-cell"><span class="fut">04:00</span></div>
+	  <div class="time-cell"><span class="fut">05:00</span></div>
+    </div>
+    <div class="weathericons">
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 2@2x.png" srcset="天氣ICON_01晴天 2@2x.png 2x, 天氣ICON_01晴天 2@3x.png 3x" alt="晴天_過去灰"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+      <div class="icons-img"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 2x, 天氣ICON_01晴天 3@3x.png 3x" alt="晴天_未來彩"></div>
+    </div>
+    <div class="temperature-chart" id="curve_chart">
+      <!--這裡是氣象溫度的折線圖-->
+    </div>
+    <div class="rain-probability">
+       <div class="rain-cell"></div>
+       <div class="rain-cell"></div>
+       <div class="rain-cell"></div>
+       <div class="rain-cell"></div>
+       <div class="rain-cell"></div>
+       <div class="rain-cell"></div>
+       <div class="rain-cell">0%</div>
+       <div class="rain-cell">10%</div>
+       <div class="rain-cell">20%</div>
+       <div class="rain-cell">15%</div>
+       <div class="rain-cell">0%</div>
+       <div class="rain-cell">25%</div>
+    </div>
+  </div>
+  </div>
+  
+  <!-- 第3個區塊 -->
+  <div class="section3">
+    <div class="grid">
+      <div class="grid-item">
+         <div class="title">體感溫度</div>
+         <div class="number">28°C</div>
+      </div>
+      <div class="grid-item">
+         <div class="title">濕度</div>
+         <div class="number">70%</div>
+      </div>
+      <div class="grid-item">
+         <div class="title">紫外線指數</div>
+         <div class="number">5 <span class="commentOrg">高量級</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 第4個區塊 -->
+  <div class="section4">
+    <div class="data-row">
+      <div class="data-item"><!-- 請放置從明天開始7天的天氣資料 -->
+          <div class="field">6/16 (二)</div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png"  alt="濕度小圖" /> 30%</div>
+      </div><hr />
+      <div class="data-item">
+          <div class="field">6/17 (三)</div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png"  alt="濕度小圖" /> 30%</div>
+      </div><hr />
+      <div class="data-item">
+          <div class="field">6/18 (四)</div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png"  alt="濕度小圖" /> 30%</div>
+      </div><hr />
+      <div class="data-item">
+          <div class="field">6/19 (五)</div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png" alt="濕度小圖" /> 30%</div>
+      </div><hr />
+      <div class="data-item">
+          <div class="field"><span class="fontRen">6/20 (六)</span></div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png" alt="濕度小圖" /> 30%</div>
+      </div><hr />
+	  <div class="data-item">
+          <div class="field"><span class="fontRen">6/21 (日)</span></div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png" alt="濕度小圖" /> 30%</div>
+      </div><hr />
+	  <div class="data-item">
+          <div class="field">6/22 (一)</div>
+          <div class="field"><img src="images/small/天氣ICON_01晴天 3@2x.png" srcset="天氣ICON_01晴天 3@2x.png 1x, 天氣ICON_01晴天 3@3x.png 2x" alt="晴天_未來彩"></div>
+          <div class="field"><span class="fontOrg">28°C</span> - <span class="fontBlu">22°C</span></div>
+          <div class="field"><img src="images/rain.png"  alt="濕度小圖" /> 30%</div>
+      </div>
+    </div>
+	<!-- 第5個區塊，空白區塊，墼高地板用 -->
+  <div class="section5">
+  </div>
+</body>
+</html>
